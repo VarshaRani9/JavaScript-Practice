@@ -19,6 +19,9 @@ function Employee(Id, Name, Age, City, Salary, Bonus, CompanyName) {
   this.CompanyName = CompanyName;
 }
 
+Student.prototype.__proto__ = Person.prototype;
+Employee.prototype.__proto__ = Person.prototype;
+
 const person = new Person(1, "John Doe", 30, "New York");
 const student = new Student(2, "Alice Smith", 20, "Los Angeles", 95, "A", "XYZ College");
 const employee = new Employee(3, "Bob Johnson", 35, "San Francisco", 60000, 5000, "ABC Inc.");
